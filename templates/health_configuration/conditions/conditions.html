@@ -1,0 +1,58 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-4 col-3">
+        <h4 class="page-title">Conditions</h4>
+    </div>
+
+    <div class="col-sm-8 col-9 text-right m-b-20">
+        <div class="btn-group btn-group-sm" style="margin-right: 8px">
+            <select class="select">
+                <option>Export As</option>
+                <option>PDF</option>
+                <option>CSV</option>
+
+            </select>
+            <button class="btn btn-primary"> <i class="fa fa-plus"></i> Add New </button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box">
+            <div class="card-block">
+
+                <div class="table-responsive">
+                    <table id="example" class=" table table-stripped  dt-responsive  ">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Code</th>
+                                <th>Category</th>
+                                <th class="text-right">Action</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for condition in conditions %}
+                            <tr>
+                                <td>{{condition.name}}</td>
+                                <td>{{condition.code}}</td>
+                                <td>{{condition.category}}</td>
+                                 <td class="text-right"><a href="#"><i class="far fa-edit" style="color: #003366; margin-right: 2.5px;"> </i></a><a href="#"> <i class="far fa-trash-alt "style="color: #003366; margin-right: 12.5px;"> </i> </a></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="sidebar-overlay" data-reff=""></div>
+
+{% endblock content %}

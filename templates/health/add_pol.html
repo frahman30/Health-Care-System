@@ -1,0 +1,203 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+{% load widget_tweaks %}
+              <form method="POST" class="post-form" action="/health/add_pol">  
+        {% csrf_token %}  
+        
+     <div class="row">
+                    <div class="col-md-8 offset">
+                        <h4 class="page-title">Add Page of Life</h4>
+                    </div>
+                </div>
+
+
+                <div class="profile-tabs">
+                   
+
+                        <div class="card-box">
+                        <span style="font-weight: bold;">Person</span>
+                        <br />
+                            	<div class="row">
+	                            	<div class="col-md-4">
+	                                    <div class="form-group">
+	                                        <label>Name</label>
+	                                       {{ form.person|add_class:"form-control" }}
+	                                    </div>
+	                                </div>
+	                            	<div class="col-md-4">
+	                                        <label>Family Names</label>
+	                                        <input type="text" class="form-control">
+	                                </div>
+	                            	<div class="col-md-4">
+	                                        <label>PUID</label>
+	                                         {{ form.id|add_class:"form-control"}} 
+	                                </div>
+	                            </div>
+                            	<div class="row">
+	                            	<div class="col-md-4">
+	                                    <div class="form-group">
+	                                        <label>Gender</label>
+	                                        <select class="select">
+	                                        <option>Select</option>
+												<option>Male</option>
+												<option>Female</option>
+											    <option>Other</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+	                            	<div class="col-md-4">
+	                                        <label>DOB</label>
+	                                        <input type="text" class="form-control">
+	                                </div>
+	                            	<div class="col-md-4">
+	                                        <label> Marital Status</label>
+	                                        <select class="select">
+	                                       <option>Select</option>
+												<option>Unmarried</option>
+												<option>Married</option>
+											    <option>Divorced</option>
+											    <option>Widowed</option>
+	                                        </select>
+	                                </div>
+	                            </div>
+                            	<div class="row">
+	                            	<div class="col-md-4">
+	                                    <div class="form-group">
+	                                        <label>Date</label>
+	                                        <input type="text" class="form-control ">
+	                                    </div>
+	                                </div>
+	                            	<div class="col-md-4">
+	                                        <label>Relevance</label>
+	                                        {{ form.relevance|add_class:"form-control" }}
+	                                       
+	                                </div>
+	                            	<div class="col-md-4">
+	                                        <label>Age</label>
+	                                        {{ form.age|add_class:"form-control"  }}  
+	                                </div>
+	                            </div>
+                            	<div class="row">                          
+	                                <div class="col-md-6">
+	                                    <div class="form-group">
+	                                        <label>Page Type</label>
+	                                         <select class="select">
+	                                       <option>Select</option>
+												<option>Medical</option>
+												<option>Demographical</option>
+	                                        </select>
+	                                    </div>
+	                                </div>                          
+	                                 <div class="col-sm-6">
+                        <div class="form-group">
+                        <label>Institution</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                </div>
+                                <input class="form-control" type="text">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">Institution</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+	                                </div>                          
+	                             <div class="row">
+	                            	<div class="col-md-12">
+	                                   <div class="form-group">
+                                <label>Summary</label>
+                                {{ form.summary|add_class:"form-control" }} 
+                            </div>
+	                                </div>
+	                            </div>                                
+	                            </div>
+                                         	
+                    			
+                       
+<div class="card-box">
+                                <div class="row" style="margin-top: 5px;">
+	                            	<div class="col-md-12">
+                    					<span style="font-weight: bold;">Context</span>
+                    					 <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+										<label>Health Condition</label>
+									{{ form.health_condition_text|add_class:"form-control" }} 
+									</div>
+                                </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+										<label>Code</label>
+										{{ form.health_condition_code|add_class:"form-control" }}
+									</div>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+										<label>Procedure</label>
+										{{ form.procedure_text|add_class:"form-control" }}  
+									</div>
+                                </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+										<label>Procedure Code</label>
+										{{ form.procedure_code|add_class:"form-control" }}  
+									</div>
+									
+                                </div>
+                                
+                                </div>
+                                 <div class="form-group">
+                                <label>Extended Information</label>
+                                {{ form.info|add_class:"form-control" }} 
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+										<label>Page</label>
+										{{ form.page|add_class:"form-control" }}
+									</div>
+                                </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+										<label>Account</label>
+										{{ form.federation_account|add_class:"form-control"  }}  
+									</div>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+										<label>Author</label>
+											{{ form.author|add_class:"form-control"  }}  
+									</div>
+                                </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+										<label>Node</label>
+										{{ form.node|add_class:"form-control" }}
+									</div>
+                                </div>
+                                
+                            </div>
+								</div>		
+                    		</div>
+                        </div>
+
+                       
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-primary">Clear</button>
+                                <button type="button" class="btn btn-primary">Print</button>
+            </div>
+                
+                
+</form>  
+    {% endblock %}
+   

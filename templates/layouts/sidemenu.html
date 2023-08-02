@@ -1,0 +1,590 @@
+<div class="sidebar-inner slimscroll">
+    <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+            <br />
+            <li class="submenu">
+                            <a href="#"><i class="fas fa-tachometer-alt"></i> <span> Dashboards </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/health-dashboard/patient-history">Patient's History</a></li>
+                                <li><a href="/health-dashboard/visit-history">Visit History</a></li>
+                                <li><a href="/health-dashboard/patient-visits">Patient's Visit</a></li>
+                                <li><a href="/health-dashboard/patient-tests">Patient's Test</a></li>
+
+                                {% if selected == 'Procedure Success' %}
+                                    <li><a href="/health-dashboard/nationOne" class="active" id="selected">Procedure Success</a></li>
+                                {% else %}
+                                    <li><a href="/health-dashboard/nationOne">Procedure Success</a></li>
+                                {% endif %}
+
+                                {% if selected == 'Drugs Usage' %}
+                                    <li><a href="/health-dashboard/nationTwo" class="active" id="selected">Drugs Usage</a></li>
+                                {% else %}
+                                    <li><a href="/health-dashboard/nationTwo">Drugs Usage</a></li>
+                                {% endif %}
+
+                                {% if selected == 'Diseases Data' %}                                
+                                    <li><a href="/health-dashboard/nationThree" class="active" id="selected">Diseases Data</a></li>
+                                {% else %}
+                                    <li><a href="/health-dashboard/nationThree">Diseases Data</a></li>
+                                {% endif %}
+
+                                {% if selected == 'Procedures & Usage' %}                                
+                                <li><a href="/health-dashboard/nationFour" class="active" id="selected">Procedures & Usage</a></li>
+                                {% else %} 
+                                <li><a href="/health-dashboard/nationFour">Procedures & Usage</a></li>
+                                {% endif %}
+
+                                {% if selected == 'Diseases Percentage' %}
+                                    <li><a href="/health-dashboard/sunOne" class="active" id="selected">Diseases Percentage</a></li>
+                                {% else %}
+                                    <li><a href="/health-dashboard/sunOne">Diseases Percentage</a></li>
+                                {% endif %}
+
+                                {% if selected == 'Hospital Infrastructure' %}
+                                    <li><a href="/health-dashboard/sunTwo" class="active" id="selected">Hospital Infrastructure</a></li>
+                                {% else %}
+                                    <li><a href="/health-dashboard/sunTwo">Hospital Infrastructure</a></li>
+                                {% endif %}
+
+                                {% if selected == 'Diseases & Symptoms' %}
+                                    <li><a href="/health-dashboard/treeOne" class="active" id="selected">Diseases & Symptoms</a></li>
+                                {% else %}
+                                    <li><a href="/health-dashboard/treeOne">Diseases & Symptoms</a></li>
+                                {% endif %}
+
+                                {% if selected == 'Patient Age Groups' %}
+                                    <li><a href="/health-dashboard/treeTwo" class="active" id="selected">Patient Age Groups</a></li>
+                                {% else %}
+                                    <li><a href="/health-dashboard/treeTwo">Patient Age Groups</a></li>
+                                {% endif %}
+
+                                {% if selected == 'Departments Data' %}
+                                    <li><a href="/health-dashboard/treeThree" class="active" id="selected">Departments Data</a></li>
+                                {% else %}
+                                    <li><a href="/health-dashboard/treeThree">Departments Data</a></li>
+                                {% endif %}
+
+                                {% if selected == 'Related Diseases' %}
+                                    <li><a href="/health-dashboard/treeFour" class="active" id="selected">Related Diseases</a></li>
+                                {% else %}
+                                    <li><a href="/health-dashboard/treeFour">Related Diseases</a></li>
+                                {% endif %}
+
+                            </ul>
+                        </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-book-medical"></i> <span> Books of Life </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="/health-party/addParty">Person</a></li>
+                    <li><a href="/health/pols">Pages of Life</a></li>
+                </ul>
+            </li>
+           <!-- <li>
+                <a href="/health/patients"><i class="fa fa-wheelchair"></i> Patients</a>
+            </li> -->
+            <li class="submenu">
+                <a href="#"><i class="fa fa-clinic-medical"></i> <span> Genetics </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="/health-genetics/genetics">Person Genetic Information</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="appointments.html"><i class="far fa-calendar-alt"></i> <span> Appointments </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="/health-appointments/appointments">Appointments Calendar</a></li>
+                </ul>
+            </li>
+       <!--     <li>
+                <a href="{% url 'coming_soon' %}"><i class="far fa-calendar-plus"></i> New Work Schedule</a>
+            </li>-->
+            <li>
+                <a href="/health-prescriptions/prescriptions"><i class="fas fa-prescription"></i> Prescriptions</a>
+            </li>
+            <li>
+                <a href="/health-health-professionals/healthprofs"><i class="fas fa-user-md"></i> Health Professionals</a>
+            </li>
+            <li>
+                <a href="/health-institutions/institutions"><i class="far fa-hospital"></i> Institutions</a>
+            </li>
+            <li class="submenu">
+                <a href=""><i class="fas fa-vials"></i> <span> Laboratory </span> <span class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                  <!--  <li><a href="{% url 'coming_soon' %}">Request New Order</a></li>-->
+                    <li><a href="/health-lab/labRequests">Lab Test Requests</a></li>
+                    <!--<li><a href="/health-lab/labResults"></i>Lab Test Results</a></li>-->
+
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-x-ray"></i> <span> Imaging </span> <span class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                   <!-- <li><a href="{% url 'coming_soon' %}">DX Imaging New</a></li>-->
+                    <li><a href="/health-imaging/imagingRequests">DX Imaging Requests</a></li>
+                    <li><a href="/health-imaging/imagingResults">DX Imaging Results</a></li>
+
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-notes-medical"></i> <span> Demographics </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="/health-demographics/du">Domiciliay Units</a></li>
+                    <li><a href="/health-demographics/birthCertificates">Birth Certificates</a></li>
+                    <li><a href="/health-demographics/deathCertificates">Death Certificates</a></li>
+                    <li><a href="/health-demographics/families">Families</a></li>
+                    <li><a href="/health-demographics/familyMembers">Family Members</a></li>
+
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fa fa-clinic-medical"></i> <span> Operational Areas </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="/health-operational-area/operationalAreas">Operational Areas</a></li>
+                    <li><a href="/health-operational-area/operationalSectors">Operational Sectors</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="/health-surgery/surgeries"><i class="fa fa-plus-square"></i> Surgeries</a>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-procedures"></i> <span> Hospitalization </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="/health-hospitalizations/mealOrders">Meal Orders</a></li>
+                    <li class="submenu">
+                        <a href=""> <span> Intensive Care </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="patient-icu-info.html">Patient ICU Info</a></li>
+                            <li><a href="gcs.html">GCS</a></li>
+                            <li><a href="/health-hospitalizations/apache2">APACHE II Score</a></li>
+                            <li><a href="/health-hospitalizations/ecgs">ECGs</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fa fa-clinic-medical"></i> <span> Genetics </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    {% if selected == 'Disease Genes' %}
+                        <li><a href="{% url 'genes' %}" class="active" id="selected">Disease Genes</a></li>
+                    {% else %}
+                        <li><a href="{% url 'genes' %}">Disease Genes</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Natural Variants' %}
+                        <li><a href="{% url 'varients' %}" class="active" id="selected">Natural Variants</a></li>
+                    {% else %}
+                        <li><a href="{% url 'varients' %}">Natural Variants</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Variant Phenotype' %}
+                        <li><a href="{% url 'phenotypes' %}" class="active" id="selected">Variant Phenotype</a></li>
+                    {% else %}
+                        <li><a href="{% url 'phenotypes' %}">Variant Phenotype</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Protein Related Diseases' %}
+                        <li><a href="{% url 'proteins' %}" class="active" id="selected">Protein Diseases</a></li>
+                    {% else %}
+                        <li><a href="{% url 'proteins' %}">Protein Diseases</a></li>
+                    {% endif %}
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fa fa-clinic-medical"></i> <span>DX Imaging </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    {% if selected == 'DX Imaging Test Types' %}
+                        <li><a href="{% url 'mainImagingTestTypes' %}" class="active" id="selected">DX Imaging Test Types</a></li>
+                    {% else %}
+                        <li><a href="{% url 'mainImagingTestTypes' %}">DX Imaging Test Types</a></li>
+                    {% endif %}
+
+                    {% if selected == 'DX Imaging Tests' %}
+                        <li><a href="{% url 'mainImagingTest' %}" class="active" id="selected">DX Imaging Tests</a></li>
+                    {% else %}
+                        <li><a href="{% url 'mainImagingTest' %}">DX Imaging Tests</a></li>
+                    {% endif %}
+
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-bong"></i> <span>Laboratory </span> <span class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    {% if selected == 'Lab Test Units' %}
+                        <li><a href="{% url 'labTestUnits' %}" class="active" id="selected">Lab Test Units</a></li>
+                    {% else %}
+                        <li><a href="{% url 'labTestUnits' %}">Lab Test Units</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Lab Test Types' %}
+                        <li><a href="{% url 'labTestType' %}" class="active" id="selected">Lab Test Types</a></li>
+                    {% else %}
+                        <li><a href="{% url 'labTestType' %}">Lab Test Types</a></li>
+                    {% endif %}
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-capsules"></i> <span>Medicaments</span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    {% if selected == 'Medicaments' %}
+                        <li><a href="{% url 'medicament' %}" class="active" id="selected">Medicaments</a></li>
+                    {% else %}
+                        <li><a href="{% url 'medicament' %}">Medicaments</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Medication Frequencies' %}
+                        <li><a href="{% url 'medicationDosage' %}" class="active" id="selected">Medication Frequencies</a></li>
+                    {% else %}
+                        <li><a href="{% url 'medicationDosage' %}">Medication Frequencies</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Drug Dose Units' %}
+                        <li><a href="{% url 'doseUnit' %}" class="active" id="selected">Drug Dose Units</a></li>
+                    {% else %}
+                        <li><a href="{% url 'doseUnit' %}">Drug Dose Units</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Drug Administration Routes' %}
+                        <li><a href="{% url 'drugRoute' %}" class="active" id="selected">Drug Administration</a></li>
+                    {% else %}
+                        <li><a href="{% url 'drugRoute' %}">Drug Administration</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Drug Forms' %}
+                        <li><a href="{% url 'drugForm' %}" class="active" id="selected">Drug Forms</a></li>
+                    {% else %}
+                        <li><a href="{% url 'drugForm' %}">Drug Forms</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Medicament Categories' %}
+                        <li><a href="{% url 'medicamentCategory' %}" class="active" id="selected">Medicament Categories</a></li>
+                    {% else %}
+                        <li><a href="{% url 'medicamentCategory' %}">Medicament Categories</a></li>
+                    {% endif %}
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-syringe"></i> <span>Immunization Schedule</span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+
+                    {% if selected == 'Schedule Vaccines' %}
+                        <li><a href="{% url 'immunizationSchedule' %}" class="active" id="selected">Schedule Vaccines</a></li>
+                    {% else %}
+                        <li><a href="{% url 'immunizationSchedule' %}">Schedule Vaccines</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Vaccine Doses' %}
+                        <li><a href="{% url 'vaccineDoses' %}" class="active" id="selected">Vaccine Doses</a></li>
+                    {% else %}
+                        <li><a href="{% url 'vaccineDoses' %}">Vaccine Doses</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Schedule Line' %}
+                        <li><a href="{% url 'scheduleLine' %}" class="active" id="selected">Schedule Line</a></li>
+                    {% else %}
+                        <li><a href="{% url 'scheduleLine' %}">Schedule Line</a></li>
+                    {% endif %}
+
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a href="#"><i class="fas fa-procedures"></i> <span>Procedures </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+
+                    {% if selected == 'Procedures' %}
+                        <li><a href="{% url 'mainProcedures' %}" class="active" id="selected">Procedures</a></li>
+                    {% else %}
+                        <li><a href="{% url 'mainProcedures' %}">Procedures</a></li>
+                    {% endif %}
+
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fa fa-wheelchair"></i> <span>Functionality Disability </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+
+                    {% if selected == 'Body Functions' %}
+                        <li><a href="{% url 'bodyFunctions' %}" class="active" id="selected">Body Functions</a></li>
+                    {% else %}
+                        <li><a href="{% url 'bodyFunctions' %}">Body Functions</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Body Structures' %}
+                        <li><a href="{% url 'bodyStructures' %}" class="active" id="selected">Body Structures</a></li>
+                    {% else %}
+                        <li><a href="{% url 'bodyStructures' %}">Body Structures</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Activities and Participtions' %}                    
+                        <li><a href="{% url 'activityParticipation' %}" class="active" id="selected">Activities and Participtions</a></li>
+                    {% else %}
+                        <li><a href="{% url 'activityParticipation' %}">Activities and Participtions</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Environmental Factors' %}
+                        <li><a href="{% url 'environmentalFactor' %}" class="active" id="selected">Environmental Factors</a></li>
+                    {% else %}
+                        <li><a href="{% url 'environmentalFactor' %}">Environmental Factors</a></li>
+                    {% endif %}
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"> <i class="fas fa-book-medical  "></i><span> Conditions </span> <span class="menu-arrow"></span></a>
+                <ul style="display: none;">
+
+                    {% if selected == 'Conditions' %}
+                        <li><a href="{% url 'condition' %}" class="active" id="selected">Conditions</a></li>
+                    {% else %}
+                        <li><a href="{% url 'condition' %}">Conditions</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Pathology Groups' %}
+                        <li><a href="{% url 'pathologyGroups' %}" class="active" id="selected">Pathology Groups</a></li>
+                    {% else %}
+                        <li><a href="{% url 'pathologyGroups' %}">Pathology Groups</a></li>
+                    {% endif %}
+
+                    {% if selected == 'Categories' %}
+                        <li><a href="{% url 'categories' %}" class="active" id="selected">Categories</a></li>
+                    {% else %}
+                        <li><a href="{% url 'categories' %}">Categories</a></li>
+                    {% endif %}
+
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"> <i class="fas fa-hotdog"></i> <span> Diets </span> <span class="menu-arrow"></span></a>
+                <ul style="display: none;">                    
+                    {% if selected == 'Diet Beliefs' %}      
+                        <li><a href="{% url 'dietBelief' %}" class="active" id="selected">Belief Diets</a></li>
+                    {% else %}
+                        <li><a href="{% url 'dietBelief' %}">Belief Diets</a></li>
+                    {% endif %}    
+                    {% if selected == 'Therapeutic Diets' %}      
+                        <li><a href="{% url 'dietTherapeutic' %}" class="active" id="selected">Therapeutic Diets</a></li>
+                    {% else %}
+                        <li><a href="{% url 'dietTherapeutic' %}">Therapeutic Diets</a></li>
+                    {% endif %}
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-file-medical-alt"></i> <span> Pediatrics </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="{% url 'newborn_main' %}">New Born</a></li>
+                    <li><a href="{% url 'psc_main' %}">PSC</a></li>
+
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-file-medical"></i> <span> Obstetrics </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="{% url 'obstetric_main' %}">Obstetric History</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="{% url 'support_center_main' %}"><i class="fas fa-wrench"></i> Support Center</a>
+            </li>
+            <li>
+                <a href="{% url 'archives_main' %}"><i class="fas fa-file-alt"></i> Archives</a>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fa fa-ambulance"></i> <span> Ambulances </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="{% url 'ambulances_in_support_req_main' %}">Ambulance In Support Requests</a></li>
+
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-user-nurse"></i> <span> Nursing </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="{% url 'roundings_main' %}">Roundings</a></li>
+                    <li><a href="{% url 'ambulatory_care_main' %}">Ambulatory Care</a></li>
+
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a href="#"><i class="fas fa-plus"></i> <span> Health Services </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="{% url 'health_services_main' %}">Health Services</a></li>
+                    <li><a href="{% url 'created_invoices_main' %}">Created Invoices</a></li>
+
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-microscope"></i> <span> Reporting </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="{% url 'specialties_by_institution_main' %}">Specialties By Institution</a></li>
+                    <li><a href="{% url 'operational_sectors_by_institution_main' %}">Operational Sectors By
+                            Institution</a></li>
+                    <li><a href="{% url 'summary_report_main' %}">Summary Report</a></li>
+                    <li><a href="{% url 'patient_evaluations' %}">Patient Evaluations</a></li>
+                    <li><a href="{% url 'socioeconomic_assessments_main' %}">Socioeconomic Assessments</a></li>
+                    <li><a href="{% url 'injury_surveillance_system_main' %}">Injury Surveillance System Registration</a>
+                    </li>
+                    <li><a href="{% url 'ophthalmology_evaluation_main' %}">Ophthalmologic Evaluations</a></li>
+                    <li><a href="{% url 'top_diseases' %}">Top Diseases</a></li>
+                    <li><a href="{% url 'amputations_main' %}">Amputations</a></li>
+                    <li><a href="{% url 'protheses' %}">Protheses</a></li>
+                    <li><a href="{% url 'specialties_by_health_professionals' %}">Specialties By Health
+                            Professionals</a></li>
+                    <li><a href="{% url 'coming_soon' %}">Appointments With Dx Report</a></li>
+                    <li><a href="{% url 'evaluations_reports_main' %}">Evaluations Report</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fa fa-clinic-medical"></i> <span> Federation </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="{% url 'queue_manager_main' %}">Federation Queue Manager</a></li>
+
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-cog"></i> <span> Configuration </span> <span class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                      <li class="submenu">
+                        <a href="#"> <i class="fas fa-diagnoses	"></i><span> Patients </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="/health-configuration/ethnicity">Ethnicity</a></li>
+                            <li><a href="/health-configuration/citizenship">Citizenship</a></li>
+                            <li><a href="/health-configuration/residence">Residence</a></li>
+                            <li><a href="/health-configuration/occupation">Occupation</a></li>
+
+                        </ul>
+                    </li>
+                     <!-- <li class="submenu">
+                        <a href="#"> <i class="fas fa-dna	"></i><span> Genetics </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="{% url 'genes' %}">Disease Genes</a></li>
+                            <li><a href="{% url 'varients' %}">Natural Varients</a></li>
+                            <li><a href="/health-configuration/phenotypes">Varient Phenotype</a></li>
+                            <li><a href="/health-configuration/proteins">Protein Disease</a></li>
+                            
+                        </ul>
+                    </li> -->
+                    <!-- <li class="submenu">
+                        <a href="#"> <i class="fas fa-procedures"></i><span> Procedure </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="/health-configuration/procedures">Procedure</a></li>
+                        </ul>
+                    </li> -->
+                     <li class="submenu">
+                        <a href="#"> <i class="fas fa-procedures"></i><span>Institutions </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="/health-configuration/buildings">Buildings</a></li>
+                            <li><a href="/health-configuration/units">Units</a></li>
+                            <li><a href="/health-configuration/wards">Wards</a></li>
+                            <li><a href="/health-configuration/beds">Beds</a></li>
+                            <li><a href="/health-configuration/operatingRooms">Operating Rooms</a></li>
+                        </ul>
+                    </li>
+                     <li class="submenu">
+                        <a href="#"> <i class="fa fa-clinic-medical"></i><span> Work Schedule </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="/health-configuration/specialities">Specialty</a></li>
+                            
+                        </ul>
+                    </li>
+                    <!-- <li class="submenu">
+                        <a href="#"> <i class="fa fa-clinic-medical"></i><span> DX Imaging </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="/health-configuration/imagingTestTypes">DX Imaging Test Types</a></li>
+                            <li><a href="/health-configuration/procedures">DX Imaging Tests</a></li>
+                        </ul>
+                    </li> -->
+                     <li class="submenu">
+                        <a href="#"> <i class="fas fa-diagnoses	"></i><span> Demographics </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="/health-configuration/country">Country</a></li>
+                            <li><a href="/health-configuration/subdivisions">Subdivisions</a></li>
+                           
+
+                        </ul>
+                    </li>
+                    <!-- <li class="submenu">
+                        <a href="#"> <i class="fas fa-book-medical	"></i><span> Conditions </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="{% url 'condition' %}">Conditions</a></li>
+                            <li><a href="{% url 'pathologyGroups' %}">Pathology Groups</a></li>
+                            <li><a href="{% url 'categories' %}">Categories</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- <li class="submenu">
+                        <a href="#"><i class="fa fa-wheelchair"></i> <span>Functionality Disability </span> <span
+                        class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="{% url 'bodyFunctions' %}">Body Functions</a></li>
+                            <li><a href="{% url 'bodyStructures' %}">Body Structures</a></li>
+                            <li><a href="{% url 'activityParticipation' %}">Activities and Participtions</a></li>
+                            <li><a href="{% url 'environmentalFactor' %}">Environmental Factors</a></li>
+                        </ul>
+                    </li> -->
+
+                <li class="submenu">
+                    <a href="#"><i class="fa fa-clinic-medical"></i> <span>Federation</span> <span
+                            class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="{% url 'coming_soon' %}">Federation Country Configuration</a></li>
+                        <li><a href="{% url 'coming_soon' %}">Node Configuration</a></li>
+                        <li><a href="{% url 'coming_soon' %}">Federation Objects</a></li>
+
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#"><i class="fa fa-clinic-medical"></i> <span> Misc </span> <span
+                            class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li class="submenu">
+                            <a href="#"> <span> Insurances </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="{% url 'coming_soon' %}">Insurances</a></li>
+                                <li><a href="{% url 'coming_soon' %}">Insurances Company</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'coming_soon' %}">Plan Product Policies</a></li>
+                        <li><a href="{% url 'coming_soon' %}">Occupations</a></li>
+                        <li><a href="{% url 'coming_soon' %}">Ethnicities</a></li>
+                        <li><a href="{% url 'coming_soon' %}">Medical Specialties</a></li>
+                        <li><a href="{% url 'coming_soon' %}">Health Commands</a></li>
+                        <li><a href="{% url 'coming_soon' %}">Recreational Drugs</a></li>
+                        <li><a href="{% url 'coming_soon' %}">Inpatient Meals</a></li>
+                        <li><a href="{% url 'pediatricsGrowthChart' %}">Pediatrics Growth Charts WHO</a></li>
+                        <li class="submenu">
+                            <a href="#"> <span> Diets </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="{% url 'dietBelief' %}">Belief diets</a></li>
+                                <li><a href="{% url 'dietTherapeutic' %}">Therapeutic diets</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                    </ul>
+                </li>
+        </ul>
+    </div>
+</div>
+
+<style type="text/css">
+    #selected{background-color: #003366; color: white;text-decoration: none;}
+</style>

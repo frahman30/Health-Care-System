@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Life - A Patient Care Project</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+	<style>
+	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+body {
+  font-family: 'Open Sans', 'sans-serif';
+}
+.mega-dropdown {
+  position: static !important;
+}
+.mega-dropdown-menu {
+    padding: 20px 0px;
+    width: 100%;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.mega-dropdown-menu > li > ul {
+  padding: 0;
+  margin: 0;
+}
+.mega-dropdown-menu > li > ul > li {
+  list-style: none;
+}
+.mega-dropdown-menu > li > ul > li > a {
+  display: block;
+  color: #222;
+  padding: 3px 5px;
+}
+.mega-dropdown-menu > li ul > li > a:hover,
+.mega-dropdown-menu > li ul > li > a:focus {
+  text-decoration: none;
+}
+.mega-dropdown-menu .dropdown-header {
+  font-size: 18px;
+  color: #0a509e;
+  padding: 5px 60px 5px 5px;
+  line-height: 30px;
+}
+
+.carousel-control {
+  width: 30px;
+  height: 30px;
+  top: -35px;
+
+}
+.left.carousel-control {
+  right: 30px;
+  left: inherit;
+}
+.carousel-control .glyphicon-chevron-left, 
+.carousel-control .glyphicon-chevron-right {
+  font-size: 12px;
+  background-color: #fff;
+  line-height: 30px;
+  text-shadow: none;
+  color: #333;
+  border: 1px solid #ddd;
+}
+	</style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 pull-left">
+                        <div class="logo">
+                            <a href="index.html"><img alt="Logo" src="assets/img/logo.png" width="56" height="50"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="navbar-collapse collapse" id="navbar">
+                           <ul class="nav navbar-nav main-nav pull-right navbar-right">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+  <li  class="dropdown mega-dropdown ">
+				<a href="services.html" class="dropdown-toggle" >Services <span class="caret"></span></a>				
+				<ul class="dropdown-menu mega-dropdown-menu">
+					<li class="col-sm-4">
+						<ul>
+							<li class="dropdown-header ">Nursing</li>                            
+                            <p>
+                            The nursing module provides functionality to document Roundings and Amulatory Care.</p>
+                            <li class="dropdown-header ">24/7 Ambulances</li>                            
+                            <p>
+                            Emergency Management System of life provides ambulance service for emergency situation.</p>
+                           
+						</ul>
+					</li>
+					<li class="col-sm-4">
+						<ul>
+							<li class="dropdown-header ">Laboratory</li>                            
+                            <p>
+                            The Laboratory Modules manage the request, creation and evaluation of laboratory analyses.</p>
+                            <li class="dropdown-header ">Inpatient</li>                            
+                            <p>
+Hospitalization, bed, operating room management. Inpatient care and nursing plans.
+                           </p>
+                           
+						</ul>
+					</li>
+					<li class="col-sm-4">
+						<ul>
+							<li class="dropdown-header ">Functionality and Disability</li>                            
+                            <p>
+Based on WHO International Classification of Functioning, Disability and Health.
+                          </p>
+                            <li class="dropdown-header ">DX Imaging</li>                            
+                            <p>The imaging module provides basic dx imaging management, support and workflow.                            </p>
+                           
+						</ul>
+					</li>
+					
+				</ul>				
+			</li>                                <li><a href="doctors.html">Doctors</a></li>
+			<li><a href="lab-tests.html">Lab tests</a></li>
+                                <li class="dropdown mega-dropdown">
+				<a href="departments.html" class="dropdown-toggle" >Departments <span class="caret"></span></a>				
+				<ul class="dropdown-menu mega-dropdown-menu">
+					<li class="col-sm-4">
+						<ul>
+							<li class="dropdown-header ">Demographics</li>                            
+                            <p>
+                            It manages details about domiciliary unit, birth & death certificates, families and family members.</p>
+                            <li class="dropdown-header ">Genetics</li>                            
+                            <p>
+                            Genetic packages integrate hereditary risks, family history and individual relevant genetic information.</p>
+                           
+						</ul>
+					</li>
+					<li class="col-sm-4">
+						<ul>
+							<li class="dropdown-header ">Archives</li>                            
+                            <p>
+                            Archives has functionality to store and track old or paper-based clinical records.</p>
+                            <li class="dropdown-header ">Immunization</li>                            
+                            <p>
+This manages immunization schedules per country and year, the vaccination process, and history.                            </p>
+                           
+						</ul>
+					</li>
+					<li class="col-sm-4">
+						<ul>
+							<li class="dropdown-header ">ICU</li>                            
+                            <p>
+It covers IC medicine and the processes related to ICU, like procedures and stock management.                            </p>
+                            <li class="dropdown-header ">Pediatrics</li>                            
+                            <p>
+It focuses on the basic pediatric evaluation, making emphasis in the nutritional, growth of child.                            </p>
+                           
+						</ul>
+					</li>
+					
+					
+				</ul>				
+			</li>
+                                
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a class="btn btn-primary appoint-btn" href="appointment.html">Appointment</a></li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle settings-icon" data-toggle="dropdown"><i class="fa fa-cog"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="register.html">Register</a></li>
+                                        <li><a href="forget-password.html">Forgot Password</a></li>
+                                        <li><a href="404.html">404</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="panel-control-left"><a class="toggle-menu" href="#"><i class="fa fa-bars"></i></a></div>
+        <div class="page_title">
+            <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="img-responsive" width="60" height="60"></a>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar sidebar-menu" id="side_menu">
+        <div class="sidebar-inner slimscroll">
+            <a id="close_menu" href="#"><i class="fa fa-close"></i></a>
+            <ul class="mobile-menu-wrapper" style="display: block;">
+                <li class="active">
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Home</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">About Us</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Departments</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Services</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Doctors</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Blog <i class="fa fa-chevron-down menu-toggle"></i></a>
+                    </div>
+                    <ul class="mobile-submenu-wrapper" style="display: none;">
+                        <li><a href="#">Right Sidebar</a></li>
+                        <li><a href="#">Left Sidebar</a></li>
+                        <li><a href="#">Full Width</a></li>
+                        <li><a href="#">Blog Grid</a></li>
+                        <li><a href="#">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Appointment</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Login</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Register</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Forgot Password</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">404</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <section class="section home-banner row-middle">
+            <div class="inner-bg"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-9">
+                        <div class="banner-content">
+                            <h1>A Patient Care Project</h1>
+                            <p>Our patients are at the centre of everything we do.So we are caring for the growing needs of our community.</p>
+                            <a title="Consult" class="btn btn-primary consult-btn" href="#">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-header text-center">
+                            <h3 class="header-title">About Life</h3>
+							<div class="line"></div>
+                            <p>
+                                Life is a hospital information management system with data visualization feature.
+Life is a web based system developed using DJANGO Framework which is a python web developent framework. Progres SQL is used as database for the project.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row feature-row">
+                    <div class="col-sm-4">
+                        <div class="feature-box">
+							<div class="feature-img">
+								<img width="60" height="60" alt="Book an Appointment" src="assets/img/icon-01.png">
+							</div>
+                            <h4>Book an Appointment</h4>
+							<p>Book appointment with world's best Health Professionals.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature-box">
+							<div class="feature-img">
+								<img width="60" height="60" alt="" src="assets/img/icon-02.png">
+							</div>
+                            <h4>Search a test</h4>
+							<p>Find a comprehensive list of speciality and general laboratory testing.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature-box">
+							<div class="feature-img">
+								<img width="60" height="60" alt="Find a Doctor" src="assets/img/icon-03.png">
+							</div>
+                            <h4>Find a Doctor</h4>
+							<p>Find a doctor by name, speciality, department and more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section meet-doctors">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-header text-center">
+                            <h3 class="header-title">Meet our Doctors</h3>
+							<div class="line"></div>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="our_doctor" class="owl-carousel text-center">
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="#">
+                                <img src="assets/img/doctor-thumb-01.jpg" alt="Dr. Albert Sandoval" class="img-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Albert Sandoval</div>
+                                <div class="doctors-position">Neurologist</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="doctor text-center">
+                                <img src="assets/img/doctor-thumb-02.jpg" alt="Dr. Linda Barrett" class="img-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Linda Barrett</div>
+                                <div class="doctors-position">Dentist</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="#">
+                                <img src="assets/img/doctor-thumb-03.jpg" alt="Dr. Cristina Groves" class="img-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Cristina Groves</div>
+                                <div class="doctors-position">Gynecologist</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="#">
+                                <img src="assets/img/doctor-thumb-04.jpg" alt="Dr. Henry Daniels" class="img-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Henry Daniels</div>
+                                <div class="doctors-position">Cardiologist</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="#">
+                                <img src="assets/img/doctor-thumb-05.jpg" alt="Dr. Diana Bailey" class="img-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Diana Bailey</div>
+                                <div class="doctors-position">General Surgery</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="doctor-details.html">
+                                <img src="assets/img/doctor-thumb-06.jpg" alt="Dr. Justin Parker" class="img-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Justin Parker</div>
+                                <div class="doctors-position">Physical Therapist</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="#">
+                                <img src="assets/img/doctor-thumb-07.jpg" alt="Dr. Marie Wells" class="img-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Marie Wells</div>
+                                <div class="doctors-position">Psychiatrist</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="#">
+                                <img src="assets/img/doctor-thumb-08.jpg" alt="Dr. Pamela Curtis" class="img-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Pamela Curtis</div>
+                                <div class="doctors-position">Pediatrics</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="#">
+                                <img src="assets/img/doctor-thumb-09.jpg" alt="Dr. Ronald Jacobs" class="img-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Ronald Jacobs</div>
+                                <div class="doctors-position">Oncologist</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="see-all">
+                            <a href="doctors.html" class="btn btn-primary see-all-btn">See all Doctors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section departments">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-header text-center">
+                            <h3 class="header-title">Departments</h3>
+							<div class="line"></div>
+                            <p>
+There are many hospital departments, staffed by a wide variety of health professionals, with some crossover between departments.                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="department-details.html"><img width="67" height="80" alt="Dentists" src="assets/img/icon-04.png"></a>
+                            </div>
+                            <h4><a href="#">Dentists</a></h4>
+                            <p>This department deals with patients who are having dental problems.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="#"><img width="63" height="80" alt="Neurology" src="assets/img/icon-05.png"></a>
+                            </div>
+                            <h4><a href="#">Neurology</a></h4>
+                            <p>This department deals with disorders of nervous system, including brain and spinal cord.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="#"><img width="92" height="80" alt="Opthalmology" src="assets/img/icon-06.png"></a>
+                            </div>
+                            <h4><a href="#">Opthalmology</a></h4>
+                            <p>Eye department provides services including laser treatments, optometry (sight testing).</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="#"><img width="40" height="80" alt="Orthopedics" src="assets/img/icon-07.png"></a>
+                            </div>
+                            <h4><a href="#">Orthopedics</a></h4>
+                            <p>This department treat problems that affect musculoskeletal system as muscles, joints etc.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="#"><img width="76" height="80" alt="Cancer Department" src="assets/img/icon-08.png"></a>
+                            </div>
+                            <h4><a href="#">Cancer Department</a></h4>
+                            <p>It provides radiotherapy and chemotherapy treatments for cancerous tumours.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="#"><img width="47" height="80" alt="ENT Department" src="assets/img/icon-09.png"></a>
+                            </div>
+                            <h4><a href="#">ENT Department</a></h4>
+                            <p>It provides care for variety of problems, including: general ear, nose and throat diseases</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="see-all">
+                            <a href="#" class="btn btn-primary see-all-btn">See all Departments</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Location</h4>
+                            <div class="about-clinic">
+                                <p><strong>Address:</strong>
+                                    <br>  I-14, Near Hajj Complex،
+                                    <br> Islamabad, 44000</p>
+                                <p class="m-b-0"><strong>Phone</strong>: <a href="#">(051) 8446000</a>
+                                    <br>
+                                    <strong>Fax</strong>: <a href="#">(051) 8446000</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Sitemap</h4>
+                            <ul class="footer-menu">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Departments</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Doctors</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Departments</h4>
+                            <ul class="footer-menu">
+                                <li><a href="#">Demographics</a></li>
+                                <li><a href="#">Genetics</a></li>
+                                <li><a href="#">Archives</a></li>
+                                <li><a href="#">Immunization</a></li>
+                                <li><a href="#">Pediatrics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Appointment</h4>
+                            <div class="appointment-btn">
+                                <p>Book appointment with world's best Health Professionals</p>
+                                <ul class="social-icons clearfix">
+                                    <li><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="copy-text text-center">
+                                <p>&copy; 2019 <a href="#">Life</a>. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sidebar-overlay" data-reff="#side_menu"></div>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/theme.js"></script>
+</body>
+</html>

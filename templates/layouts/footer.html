@@ -1,0 +1,51 @@
+<script type="text/javascript" src="/static/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/static/js/popper.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/static/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="/static/js/select2.min.js"></script>
+<script type="text/javascript" src="/static/js/moment.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="/static/js/app.js"></script>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function () {
+	    $('#example').DataTable();
+	    $('.js-example-basic-single').select2();
+	});
+    $('#datetimepicker3').datetimepicker({
+        format: 'LT'
+    });
+function getCookie(name) {
+var cookieValue = null;
+if (document.cookie && document.cookie !== '') {
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        // Does this cookie string begin with the name we want?
+        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+        }
+    }
+}
+return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+function csrfSafeMethod(method) {
+// these HTTP methods do not require CSRF protection
+return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+</script>
+<script type="text/javascript" src="/static/backend-js/health_demographics/js.js"></script>
+<script type="text/javascript" src="/static/backend-js/health_operational_area/js.js"></script>
+<script type="text/javascript" src="/static/backend-js/health_configuration/js.js"></script>
+<script type="text/javascript" src="/static/backend-js/health_party/js.js"></script>
+<script type="text/javascript" src="/static/backend-js/health_genetics/js.js"></script>
+<script type="text/javascript" src="/static/backend-js/health_institutions/js.js"></script>
+<script type="text/javascript" src="/static/backend-js/health/js.js"></script>
+<script type="text/javascript" src="/static/backend-js/health_imaging/js.js"></script>
+<script type="text/javascript" src="/static/backend-js/health_health_professionals/js.js"></script>

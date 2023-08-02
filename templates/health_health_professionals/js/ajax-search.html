@@ -1,0 +1,9 @@
+{% for prof in profs %}
+<option value="{{ prof.id }}"><a href="#">{{ prof.name }} </a></option>
+{% endfor %}
+
+{% for institution in institutions %}
+<option value="{{ institution.id }}"><a href="#">{{ institution.code }} </a></option>
+{% endfor %}
+
+
